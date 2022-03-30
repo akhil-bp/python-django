@@ -1,0 +1,19 @@
+{% extends 'theame.html' %}
+
+{% block content %}
+
+<h2>Products</h2>
+{% for product in products %}
+<div class="card" style="width: 18rem;margin: aito;float: left;">
+    <img src="https://picsum.photos/200/300" class="card-img-top" style="height:200px" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ product.name }} </h5>
+        <p class="card-text">Name: {{ product.name }} </p>
+        <p class="card-text">Stock: {{ product.stock }} </p>
+        <p class="card-text">Price: {{ product.price }} </p>
+        <a href="#" class="btn btn-primary">Buy now</a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
